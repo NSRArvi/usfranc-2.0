@@ -1,11 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
-// import { Outfit } from "next/font/google";
 import { Rubik } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Home/Navbar";
-import Footer from "@/components/Home/Footer";
+import Footer from "@/components/shared/Footer/Footer";
+import Navbar from "@/components/shared/Navbar/Navbar";
 
-const outFit = Rubik({
+const rubik = Rubik({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
@@ -17,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${outFit.className} h-full antialiased`}>
+    <html lang="en" className={`${rubik.className} h-full antialiased`}>
       <body className="min-h-full flex flex-col overflow-x-hidden">
         <div>
           <Navbar />
