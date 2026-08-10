@@ -170,7 +170,7 @@ export default function Navbar() {
 
             <div>
               <Button
-                lassName="px-6 py-3 rounded-lg bg-primary text-white font-semibold shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#171310] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                 asChild
               >
                 <Link href="/pre-order">Get USFF Now</Link>

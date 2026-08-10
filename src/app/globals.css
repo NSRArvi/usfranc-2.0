@@ -105,15 +105,4 @@
   body {
     @apply bg-background text-foreground;
   }
-  /* html {
-    @apply font-sans;
-  } */
 }
-
-  @keyframes coinFloat {
-    0%, 100% { transform: translate(-50%, -55%) translateY(0px); }
-    50%       { transform: translate(-50%, -55%) translateY(-10px); }
-  }
-  .animate-coin-float {
-    animation: coinFloat 5s ease-in-out infinite;
-  }

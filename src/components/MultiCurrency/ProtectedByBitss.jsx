@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { ShieldCheck, Check, ArrowRight } from "lucide-react";
+import { ShieldCheck, Check, ArrowRight, ArrowLeft } from "lucide-react";
 import { SECURITY_PILLARS } from "@/data/SECURITY_PILLARS";
 import { TRUST_BADGES } from "@/data/TRUST_BADGES";
+import { Button } from "../ui/button";
 
 export default function ProtectedByBitss() {
   return (
@@ -34,13 +35,23 @@ export default function ProtectedByBitss() {
               </p>
             </div>
 
-            <Link
+            {/* <Link
               href="#"
               className="inline-flex items-center justify-center gap-2 mt-8 px-6 py-3 rounded-md text-[14px] font-semibold text-white bg-primary hover:brightness-110 transition-all duration-150 w-fit"
             >
               Learn More About Bitss
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+             
+            </Link> */}
+
+            <Button
+              className="group inline-flex items-center justify-center gap-2 min-h-12 rounded-xl bg-primary px-6 py-3 font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#171310] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              asChild
+            >
+              <Link href="#">
+                {" "}
+                Create Free Wallet <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
           </div>
 
           {/* ── RIGHT ── */}
