@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import {
   motion,
@@ -34,6 +34,8 @@ const pillars = [
 ];
 
 const HighlightsTwo = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
   const sectionRef = useRef(null);
   const prefersReducedMotion = useReducedMotion();
 
@@ -48,15 +50,20 @@ const HighlightsTwo = () => {
     prefersReducedMotion ? ["0%", "0%"] : ["-5%", "5%"],
   );
 
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const motionStyle = isMounted
+    ? { y: parallaxY, scale: 1.08 }
+    : { scale: 1.08 };
+
   return (
     <section
       ref={sectionRef}
       className="relative mt-20 overflow-hidden rounded-[2rem] border border-[#171310]/8 bg-[#f5efe8] sm:mt-28 sm:rounded-[2.5rem]"
     >
-      <motion.div
-        className="absolute inset-0"
-        style={{ y: parallaxY, scale: 1.08 }}
-      >
+      <motion.div className="absolute inset-0" style={motionStyle}>
         <Image
           src={highlightImage}
           alt=""
