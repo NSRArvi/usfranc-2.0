@@ -67,8 +67,6 @@ export default function PreOrderPage() {
       alert("ID documents are required");
       return;
     }
-
-    console.log(data, files);
   };
 
   return (
@@ -221,7 +219,8 @@ export default function PreOrderPage() {
                         setFiles((prev) => ({ ...prev, [key]: null }));
                         setPreview((prev) => ({ ...prev, [key]: null }));
                       }}
-                      className="absolute top-2 right-2 bg-white shadow p-1 rounded-full hover:bg-red-100 transition">
+                      className="absolute top-2 right-2 bg-white shadow p-1 rounded-full hover:bg-red-100 transition"
+                    >
                       <X className="w-4 h-4 text-red-500" />
                     </button>
 
@@ -332,7 +331,8 @@ export default function PreOrderPage() {
               agreement
                 ? "bg-primary hover:bg-[#5f4800] cursor-pointer"
                 : "cursor-not-allowed"
-            }`}>
+            }`}
+          >
             Confirm Order
           </Button>
         </div>

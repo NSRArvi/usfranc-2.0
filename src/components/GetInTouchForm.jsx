@@ -238,7 +238,6 @@ const ContactPage = () => {
       return;
     }
     setCaptchaError(false);
-    console.log("Form Data:", data);
     alert("Message Sent Successfully!");
     reset();
     generateCaptcha();
@@ -328,7 +327,8 @@ const ContactPage = () => {
                   </label>
                   <select
                     {...register("country", { required: "Required" })}
-                    className="w-full h-10 rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500">
+                    className="w-full h-10 rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500"
+                  >
                     <option value="">Select Country</option>
                     {COUNTRIES.map((c) => (
                       <option key={c} value={c}>
@@ -410,7 +410,8 @@ const ContactPage = () => {
 
               <Button
                 type="submit"
-                className="w-full h-12 bg-primary/90 hover:bg-primary text-white font-bold rounded-lg shadow-lg">
+                className="w-full h-12 bg-primary/90 hover:bg-primary text-white font-bold rounded-lg shadow-lg"
+              >
                 <Send size={16} className="mr-2" /> Send Message
               </Button>
             </form>
@@ -427,7 +428,8 @@ const ContactPage = () => {
               marginHeight="0"
               marginWidth="0"
               src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=45%20Fitzroy%20Street,%20London,%20England,%20W1T%206EB,%20UK+(USFRANC%20LTD)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-              className="grayscale hover:grayscale-0 transition-all duration-700"></iframe>
+              className="grayscale hover:grayscale-0 transition-all duration-700"
+            ></iframe>
           </div>
         </div>
       </div>

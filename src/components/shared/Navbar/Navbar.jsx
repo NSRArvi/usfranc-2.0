@@ -109,6 +109,11 @@ const navItems = [
   },
   {
     type: "link",
+    label: "Blogs",
+    href: "/blogs",
+  },
+  {
+    type: "link",
     label: "Contact",
     href: "/contact",
   },
