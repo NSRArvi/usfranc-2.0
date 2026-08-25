@@ -1,5 +1,4 @@
 "use client";
-// import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -28,8 +27,6 @@ export default function Blogs() {
       loadBlogs();
     } catch (error) {
       console.error(error);
-    } finally {
-      setIsLoading(false);
     }
   }, []);
 

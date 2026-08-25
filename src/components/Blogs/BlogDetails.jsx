@@ -17,7 +17,7 @@ function readingTime(html) {
 
 export default function BlogDetails({ slug }) {
   const [blog, setBlog] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     try {
@@ -38,8 +38,6 @@ export default function BlogDetails({ slug }) {
       }
     } catch (error) {
       console.error(error);
-    } finally {
-      setIsLoading(false);
     }
   }, [slug]);
 
@@ -56,7 +54,11 @@ export default function BlogDetails({ slug }) {
     }
   }
   if (isLoading) {
-    return <BlogDetailSkeleton />;
+    return (
+      <Container>
+        <BlogDetailSkeleton />
+      </Container>
+    );
   }
   return (
     <Container>

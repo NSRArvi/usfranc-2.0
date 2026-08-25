@@ -1,6 +1,6 @@
 export default function BlogDetailSkeleton() {
   return (
-    <div className="pb-12 mt-20 lg:mt-40 animate-pulse">
+    <div className="pb-12 pt-10 animate-pulse">
       {/* Header */}
       <header className="flex items-center justify-between py-3.5 pb-5 border-b border-[#e5e7eb] mb-7">
         <div className="h-4 w-24 bg-[#e5e7eb] rounded" />
