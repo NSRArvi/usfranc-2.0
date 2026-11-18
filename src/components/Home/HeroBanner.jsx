@@ -74,7 +74,7 @@ const HeroBanner = () => {
               </Link>
 
               <Link
-                href="/lite-paper"
+                href="/whitepaper"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#171310]/12 bg-white/70 px-6 py-3.5 font-semibold text-[#171310] backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:border-[#171310]/25 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2"
               >
                 <FileText className="h-4 w-4" />
